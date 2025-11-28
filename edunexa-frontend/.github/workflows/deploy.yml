@@ -1,0 +1,43 @@
+name: CI/CD React APP
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.17.0
+
+      - name: Install CI
+        run: npm ci
+
+      - name: Build the Project
+        run: npm run build
+      
+      #Configure Git Identity
+      - name: Configure Git
+        run: |
+          git config --global user.name LaxmiVarshithaCH
+          git config --global user.email laxmivarshithach@gmail.com
+      
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          npm run deploy

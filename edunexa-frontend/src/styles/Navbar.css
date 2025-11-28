@@ -1,0 +1,52 @@
+/* Updated Navbar styles to match HomePage theme */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #422701; /* Match homepage dark brown */
+  color: #D6B588; /* Warm beige text */
+  border-bottom: 4px solid #D6B588;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.4rem;
+  color: #D6B588;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-button {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #D6B588;
+  color: #422701;
+  border: 3px solid #705E46;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  font-size: 0.8rem;
+}
+
+.nav-button:hover {
+  background-color: #C6C0B9;
+  color: #422701;
+  transform: translate(-3px, -3px);
+  box-shadow: 4px 4px #705E46;
+}
+
+.nav-button.active {
+  background-color: #705E46;
+  color: #D6B588;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}

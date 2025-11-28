@@ -1,0 +1,336 @@
+.home-container { 
+  font-family: 'Roboto', sans-serif; 
+  background-color: #422701; /* very dark brown background */ 
+  color: #D6B588; /* warm beige text */ 
+  padding: 0 2rem; 
+} 
+
+/* Hero Section */ 
+.hero-section { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 4rem 0; 
+  background: linear-gradient(120deg, #C6C0B9, #D6B588); 
+  color: #422701; /* dark text on light bg here */ 
+  border-radius: 15px; 
+  gap: 2rem; 
+} 
+
+.hero-text { 
+  flex: 1; 
+  min-width: 300px; 
+} 
+
+.hero-text h1 { 
+  font-family: 'Press Start 2P', cursive; 
+  font-size: 2.2rem; 
+  margin-bottom: 1rem; 
+  color: #422701; 
+} 
+
+.hero-text p { 
+  font-size: 1.2rem; 
+  margin-bottom: 2rem; 
+  color: #422701; 
+} 
+
+.hero-image { 
+  flex: 1; 
+  min-width: 300px; 
+  text-align: center; 
+} 
+
+.hero-image img { 
+  max-width: 100%; 
+  border-radius: 10px; 
+  border: 4px solid #422701; 
+  box-shadow: 5px 5px #705E46; 
+} 
+
+/* CTA Button */ 
+.cta-button { 
+  font-family: 'Press Start 2P', cursive; 
+  background-color: #D6B588; 
+  color: #422701; 
+  border: 4px solid #422701; 
+  padding: 12px 24px; 
+  cursor: pointer; 
+  transition: transform 0.1s, box-shadow 0.1s; 
+} 
+
+.cta-button:hover { 
+  transform: translate(-3px, -3px); 
+  box-shadow: 5px 5px #705E46; 
+} 
+
+/* Features Section */ 
+.features-section { 
+  text-align: center; 
+  padding: 4rem 0; 
+} 
+
+.features-section h2 { 
+  font-family: 'Press Start 2P', cursive; 
+  color: #D6B588; 
+  margin-bottom: 2rem; 
+} 
+
+.features-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 2rem; 
+  justify-items: center; 
+} 
+
+.feature-card { 
+  background-color: #C6C0B9; /* light gray-beige */ 
+  border: 3px solid #D6B588; 
+  border-radius: 10px; 
+  padding: 1.5rem; 
+  transition: transform 0.1s, box-shadow 0.1s; 
+  color: #422701; 
+} 
+
+.feature-card:hover { 
+  transform: translate(-4px, -4px); 
+  box-shadow: 5px 5px #705E46; 
+} 
+
+.feature-card h3 { 
+  font-family: 'Press Start 2P', cursive; 
+  color: #705E46; 
+  margin-bottom: 0.5rem; 
+} 
+
+/* Popular Courses */ 
+.popular-section { 
+  text-align: center; 
+  padding: 4rem 0; 
+} 
+
+.popular-section h2 { 
+  font-family: 'Press Start 2P', cursive; 
+  color: #D6B588; 
+  margin-bottom: 2rem; 
+} 
+
+.courses-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 2rem; 
+  justify-items: center; 
+} 
+
+.course-card { 
+  background-color: #422701; /* very dark background */ 
+  border: 3px solid #D6B588; 
+  border-radius: 8px; 
+  padding: 1rem; 
+  text-align: center; 
+  transition: transform 0.1s, box-shadow 0.1s; 
+  color: #D6B588; 
+} 
+
+.course-card:hover { 
+  transform: translate(-4px, -4px); 
+  box-shadow: 5px 5px #705E46; 
+} 
+
+.course-thumbnail { 
+  font-size: 3rem; 
+  margin-bottom: 1rem; 
+  color: #D6B588; 
+} 
+
+.pixel-button { 
+  font-family: 'Press Start 2P', cursive; 
+  background-color: #D6B588; 
+  color: #422701; 
+  border: 4px solid #705E46; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  margin-top: 0.5rem; 
+  transition: transform 0.1s, box-shadow 0.1s; 
+} 
+
+.pixel-button:hover { 
+  transform: translate(-2px, -2px); 
+  box-shadow: 4px 4px #705E46; 
+} 
+
+/* About Section */ 
+.about-section { 
+  text-align: center; 
+  padding: 4rem 0; 
+  background-color: #C6C0B9; /* light gray-beige background */ 
+  border-radius: 15px; 
+  color: #422701; 
+} 
+
+.about-section h2 { 
+  font-family: 'Press Start 2P', cursive; 
+  color: #D6B588; 
+  margin-bottom: 1rem; 
+} 
+
+/* CTA Section */ 
+.cta-section { 
+  text-align: center; 
+  padding: 4rem 0; 
+} 
+
+.cta-section h2 { 
+  font-family: 'Press Start 2P', cursive; 
+  color: #D6B588; 
+  margin-bottom: 2rem; 
+} 
+
+.homepage-container { 
+  font-family: 'Roboto', sans-serif; 
+  color: #D6B588; 
+  background: #422701; /* very dark brown background */ 
+} 
+
+/* Hero Section */ 
+.hero-section { 
+  text-align: center; 
+  padding: 4rem 2rem; 
+  background: linear-gradient(to right, #C6C0B9, #D6B588); 
+  color: #422701; 
+  border-radius: 10px; 
+  margin-bottom: 2rem; 
+} 
+
+.hero-section h1 { 
+  font-size: 3rem; 
+  margin-bottom: 1rem; 
+  color: #422701; 
+} 
+
+.hero-section p { 
+  font-size: 1.2rem; 
+  margin-bottom: 2rem; 
+  color: #422701; 
+} 
+
+.cta-button { 
+  padding: 12px 30px; 
+  background: #D6B588; 
+  color: #422701; 
+  border: none; 
+  border-radius: 6px; 
+  font-size: 1rem; 
+  cursor: pointer; 
+  transition: transform 0.2s, background 0.2s; 
+} 
+
+.cta-button:hover { 
+  background: #C6C0B9; 
+  transform: translateY(-3px); 
+} 
+
+/* Features Section */ 
+.features-section { 
+  text-align: center; 
+  padding: 3rem 2rem; 
+} 
+
+.features-section h2 { 
+  font-size: 2rem; 
+  margin-bottom: 2rem; 
+  color: #D6B588; 
+} 
+
+.features-grid { 
+  display: flex; 
+  justify-content: center; 
+  gap: 2rem; 
+  flex-wrap: wrap; 
+} 
+
+.feature-card { 
+  background: #C6C0B9; /* light gray-beige */ 
+  padding: 2rem; 
+  border-radius: 8px; 
+  width: 250px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+  color: #422701; 
+} 
+
+.feature-card h3 { 
+  margin-bottom: 1rem; 
+  color: #705E46; 
+} 
+
+.feature-card p { 
+  font-size: 0.95rem; 
+  color: #422701; 
+} 
+
+/* Courses Preview Section */ 
+.courses-preview-section { 
+  text-align: center; 
+  padding: 3rem 2rem; 
+} 
+
+.courses-preview-section h2 { 
+  font-size: 2rem; 
+  margin-bottom: 2rem; 
+  color: #D6B588; 
+} 
+
+.courses-grid { 
+  display: flex; 
+  justify-content: center; 
+  gap: 1.5rem; 
+  flex-wrap: wrap; 
+} 
+
+.course-card { 
+  background: #D6B588; 
+  color: #422701; 
+  padding: 1.5rem 1rem; 
+  border-radius: 6px; 
+  width: 200px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: transform 0.2s, background 0.2s; 
+  text-align: center; 
+} 
+
+.course-card:hover { 
+  background: #C6C0B9; 
+  transform: translateY(-5px); 
+} 
+
+/* Benefits Section */ 
+.benefits-section { 
+  text-align: center; 
+  padding: 3rem 2rem; 
+} 
+
+.benefits-section h2 { 
+  font-size: 2rem; 
+  margin-bottom: 2rem; 
+  color: #D6B588; 
+} 
+
+.benefits-section ul { 
+  list-style: none; 
+  padding: 0; 
+  display: flex; 
+  justify-content: center; 
+  gap: 2rem; 
+  flex-wrap: wrap; 
+} 
+
+.benefits-section li { 
+  background: #422701; /* very dark brown background */ 
+  padding: 1rem 2rem; 
+  border-radius: 6px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+  font-weight: 500; 
+  color: #D6B588; 
+}

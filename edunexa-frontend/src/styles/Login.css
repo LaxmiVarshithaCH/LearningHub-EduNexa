@@ -1,0 +1,116 @@
+/* Container with warm gradient and subtle pattern */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #422701 0%, #705E46 100%);
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft abstract shapes in background */
+.login-container::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(214, 181, 136, 0.15);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  filter: blur(100px);
+  z-index: 1;
+}
+
+.login-container::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(198, 192, 185, 0.15);
+  border-radius: 50%;
+  bottom: -100px;
+  right: -80px;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+/* Form card */
+.login-card {
+  position: relative;
+  background: #D6B588; /* warm beige */
+  padding: 3.5rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(66, 39, 1, 0.6);
+  width: 400px;
+  text-align: center;
+  z-index: 2;
+  color: #422701;
+}
+
+/* Title */
+.login-card h1 {
+  margin-bottom: 2.5rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.8rem;
+  color: #422701;
+}
+
+/* Inputs and selects centered and styled */
+.login-card input,
+.login-card select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 10px;
+  border: 2px solid #705E46;
+  font-size: 1rem;
+  background: #C6C0B9; /* light gray-beige */
+  color: #422701;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+
+.login-card input::placeholder {
+  color: #705E46;
+  font-weight: 400;
+}
+
+.login-card input:focus,
+.login-card select:focus {
+  outline: none;
+  border-color: #422701;
+  background: #D6B588;
+}
+
+/* Button styling */
+.login-card button {
+  width: 100%;
+  padding: 1rem;
+  background: #422701; /* dark brown */
+  color: #D6B588; /* warm beige */
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 4px 4px #705E46;
+  transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+}
+
+.login-card button:hover {
+  background: #705E46;
+  transform: translateY(-3px);
+  box-shadow: 6px 6px #422701;
+}
+
+/* Error message */
+.error-msg {
+  color: #ff3860;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
