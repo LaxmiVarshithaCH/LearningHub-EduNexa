@@ -1,0 +1,25 @@
+---
+- name: Deploy EduNexa to Kubernetes
+  hosts: local
+  connection: local
+
+  tasks:
+
+    - name: Apply MySQL
+      command: kubectl apply -f /Users/laxmivarshitha/Documents/SEM-5/CI:CD/learning_hub/k8s/mysql.yaml --validate=false
+
+    - name: Apply Backend
+      command: kubectl apply -f /Users/laxmivarshitha/Documents/SEM-5/CI:CD/learning_hub/k8s/backend.yaml --validate=false
+
+    - name: Apply Frontend
+      command: kubectl apply -f /Users/laxmivarshitha/Documents/SEM-5/CI:CD/learning_hub/k8s/frontend.yaml --validate=false
+
+    - name: Apply Ingress
+      command: kubectl apply -f /Users/laxmivarshitha/Documents/SEM-5/CI:CD/learning_hub/k8s/ingress.yaml --validate=false
+
+    - name: Check Pod Status
+      command: kubectl get pods -A
+      register: output
+
+    - debug:
+        var: output.stdout

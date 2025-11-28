@@ -1,0 +1,9 @@
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+  namespace: awx
+spec:
+  service_type: NodePort
+  admin_user: admin
+  admin_password_secret: awx-admin-secret   # This is valid according to CRD

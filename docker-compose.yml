@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  mysql-db:
+    image: mysql:8
+    container_name: mysql-edunexa
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "Varshitha@410"
+      MYSQL_DATABASE: "edunexa_db"
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    platform: linux/amd64   # required on Apple Silicon (M1/M2/M3/M4)
+
+  backend:
+    build:
+      context: ./edunexa    # update if your backend folder name differs
+    container_name: backend-edunexa
+    restart: always
+    depends_on:
+      - mysql-db
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/edunexa_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: "Varshitha@410"
+    platform: linux/amd64   # ensures mysql & java match on mac arm
+
+  frontend:
+    build:
+      context: ./edunexa-frontend    # update if needed
+    container_name: frontend-edunexa
+    ports:
+      - "5173:80"            # 5173 → browser → Nginx inside container
+    depends_on:
+      - backend
+    platform: linux/amd64
+
+volumes:
+  mysql_data:
